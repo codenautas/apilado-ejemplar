@@ -1,0 +1,9 @@
+.git
+.vscode/
+
+local-*
+*-local.*
+
+# Publish Typescript code
+!src/
+
