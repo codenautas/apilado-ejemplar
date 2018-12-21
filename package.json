@@ -14,9 +14,10 @@
     "unlogged"
   ],
   "dependencies": {
-    "apilado": "~0.0.1"
+    "apilado": "~0.0.2"
   },
   "devDependencies": {
+    "@types/node": "~10.12.18",
     "copyfiles": "~2.1.0"
   },
   "engines": {
