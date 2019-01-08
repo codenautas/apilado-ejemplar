@@ -7,7 +7,7 @@ export typeof T.AppApilado;
 */
 
 export function emergeAppExample<T extends typeof Apilado>(Base:T){
-    class AppApilado2 extends Base.AppApilado{
+    return {...Base, AppApilado: class AppApilado2 extends Base.AppApilado{
         constructor(...args:any[]){ 
             super(args);
             this.usuariosTD.field.rol={typeName:'text'};
@@ -21,8 +21,7 @@ export function emergeAppExample<T extends typeof Apilado>(Base:T){
         }
         */
         get esTres(){ return 'sí, es 3!'}
-    }    
-    return {...Base, AppApilado: AppApilado2};
+    }};
 }
 
 var Aplicacion = emergeAppExample(Apilado);
