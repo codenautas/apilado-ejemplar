@@ -18,6 +18,7 @@ export function emergeApiladoEjemplar1<T extends typeof Apilado>(Base:T){
 export function emergeApiladoEjemplar2<T extends typeof Apilado>(Base:T){
     class Backend extends Base.Backend{
         constructor(...args:any[]){ 
+            console.log('constructor case 2')
             super(...args);
             // this.usuariosTD.field.rol={typeName:'text'};
         }
@@ -28,6 +29,7 @@ export function emergeApiladoEjemplar2<T extends typeof Apilado>(Base:T){
         //     primaryKey:['rol']
         // }
         get esTres(){ return 'sí, pero no exporta'}
+        get delSegundoCaso(){ return 'estoy en el segundo caso'; }
     }
     return {...Base, Backend };
 }
@@ -37,6 +39,7 @@ export function emergeApiladoEjemplar2<T extends typeof Apilado>(Base:T){
 export function emergeApiladoEjemplar3<T extends typeof Apilado>(Base:T){
     return {...Base, Backend: class Backend extends Base.Backend{
         constructor(...args:any[]){ 
+            console.log('constructor case 3')
             super(...args);
             // this.usuariosTD.field.rol={typeName:'text'};
         }
@@ -55,7 +58,7 @@ var Aplicacion1 = emergeApiladoEjemplar1(Apilado);
 var Aplicacion2 = emergeApiladoEjemplar2(Apilado);
 var Aplicacion3 = emergeApiladoEjemplar3(Apilado);
 
-function demo(BE:typeof Apilado.Backend, initText:string){
+export function demo(BE:typeof Apilado.Backend, initText:string){
     var app = new BE(initText)
     app.start();
     app.describe();

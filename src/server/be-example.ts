@@ -6,7 +6,8 @@ import {Constructor} from "apilado";
 export function emergeBeEjemplar<T extends Constructor<Apilado.Backend>>(Base:T){
     return class Backend extends Base{
         constructor(...args:any[]){ 
-            super(args);
+            console.log('constructor case 1')
+            super(...args);
             // this.usuariosTD.field.rol={typeName:'text'};
         }
         /*

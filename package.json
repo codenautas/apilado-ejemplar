@@ -1,7 +1,7 @@
 {
   "name": "apilado-ejemplar",
   "description": "Ejemplo de Apilado",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/apilado",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "unlogged"
   ],
   "dependencies": {
-    "apilado": "~0.0.7"
+    "apilado": "~0.0.8"
   },
   "devDependencies": {
     "@types/node": "~10.12.18",
